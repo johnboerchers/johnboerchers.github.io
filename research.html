@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — John Boerchers</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-header {
+    border-bottom: 1px solid var(--border);
+    padding: 80px 48px 48px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .page-header h2 {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-top: 12px;
+  }
+
+  /* ── Research overview ── */
+  .research-overview {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 680px;
+    margin-top: 20px;
+  }
+
+  .research-overview strong { color: var(--text); font-weight: 500; }
+
+  /* ── Research entries ── */
+  .research-entry {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .research-entry:last-child { border-bottom: none; }
+
+  .research-meta {
+    padding-top: 4px;
+  }
+
+  .research-org {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .research-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .research-content h3 {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .research-role {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  .research-content p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 10px;
+  }
+
+  .research-content p strong { color: var(--text); font-weight: 500; }
+
+  /* ── Publications ── */
+  .pub-entry {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pub-entry:last-child { border-bottom: none; }
+
+  .pub-type {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .pub-title {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 6px;
+  }
+
+  .pub-authors {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+
+  .pub-authors strong { color: var(--text); font-weight: 500; }
+
+  .pub-venue {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+  }
+
+  .pub-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: 10px;
+    letter-spacing: 0.08em;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 700px) {
+    .page-header { padding: 60px 24px 40px; }
+    .research-entry { grid-template-columns: 1fr; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">jb<span>@princeton</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header fade-in">
+    <div class="label">Work</div>
+    <h2>Research</h2>
+    <p class="research-overview">
+      My research develops <strong>computational methods for high-speed turbulent reacting flows</strong>,
+      with applications in hypersonic propulsion, rotating detonation engines, and scramjets.
+      A central theme is building reduced-order models that compress complex, high-dimensional
+      physical systems into efficient representations — bridging rigorous mathematical formulation
+      with practical large-scale software.
+    </p>
+  </div>
+
+  <div class="section">
+
+    <!-- Research Experience -->
+    <div class="label">Experience</div>
+
+    <div class="research-entry fade-in">
+      <div class="research-meta">
+        <div class="research-org">Princeton</div>
+        <div class="research-date">2022 — Present</div>
+      </div>
+      <div class="research-content">
+        <h3>Computational Turbulent Reacting Flow Laboratory</h3>
+        <div class="research-role">Graduate Research Assistant &nbsp;·&nbsp; Advisor: Prof. Michael E. Mueller</div>
+        <p>
+          Developing <strong>manifold-based turbulence-chemistry interaction models</strong> that extend
+          large eddy simulation (LES) capability to premixed deflagrations and detonations. This work
+          addresses a critical gap in existing reduced-order approaches: accurately capturing
+          thermodynamic consistency and enthalpy variations in high-speed reacting flows.
+        </p>
+        <p>
+          Implementing and validating models within <strong>PeleC</strong>, an AMR-enabled exascale
+          reacting flow solver. Work involves designing numerical algorithms, building HPC workflows,
+          and benchmarking against direct numerical simulation (DNS) data in collaboration with NREL.
+        </p>
+      </div>
+    </div>
+
+    <div class="research-entry fade-in">
+      <div class="research-meta">
+        <div class="research-org">LLNL</div>
+        <div class="research-date">June — Aug 2022</div>
+      </div>
+      <div class="research-content">
+        <h3>Lawrence Livermore National Laboratory</h3>
+        <div class="research-role">Research Intern &nbsp;·&nbsp; Advisor: Boyan Lazarov</div>
+        <p>
+          Built a <strong>physics-constrained neural network</strong> in PyTorch, trained on direct
+          numerical simulation data, to serve as a surrogate model for topology optimization of
+          porous-media flow problems. Enforced physical conservation laws as hard constraints during
+          training to improve generalizability beyond the training distribution.
+        </p>
+        <p>Work presented at ASME IMECE 2022.</p>
+      </div>
+    </div>
+
+    <div class="research-entry fade-in">
+      <div class="research-meta">
+        <div class="research-org">Penn State</div>
+        <div class="research-date">2019 — 2022</div>
+      </div>
+      <div class="research-content">
+        <h3>Penn State Research Groups</h3>
+        <div class="research-role">Undergraduate Researcher</div>
+        <p>
+          <strong>Aircraft Propulsion Research Group</strong> (2021–2022, Advisor: Prof. David K. Hall):
+          Developed a viscous-inviscid coupled numerical tool for preliminary wind tunnel aerodynamic
+          design and performance analysis as an undergraduate honors thesis.
+        </p>
+        <p>
+          <strong>High Pressure Combustion Laboratory</strong> (2019–2021, Advisor: Prof. Richard Yetter):
+          Designed a 10.6 µm CO₂ laser ignition experiment to quantify energy input and flame
+          propagation in energetic solid propellants. Contributed to published study on piezoelectric
+          effects in nano-aluminum composites.
+        </p>
+      </div>
+    </div>
+
+    <!-- Publications -->
+    <div class="label" style="margin-top: 48px;">Publications &amp; Presentations</div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Journal &nbsp;·&nbsp; In Preparation</div>
+      <div class="pub-title">
+        A Thermodynamically Consistent Manifold Model for Premixed Deflagrations &amp; Detonations
+        <span class="pub-badge">2026</span>
+      </div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, M.X. Yao, L.T. Thompson, M.E. Mueller</div>
+      <div class="pub-venue">In Preparation</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">Implementation of a Thermodynamically Consistent Manifold Model for Premixed Detonations and Deflagration</div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, L.T. Thompson, M.X. Yao, M.E. Mueller</div>
+      <div class="pub-venue">APS Division of Fluid Dynamics &nbsp;·&nbsp; 2025</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">A Thermodynamically Consistent Manifold Model for Premixed Detonations and Deflagration</div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, L.T. Thompson, M.X. Yao, M.E. Mueller</div>
+      <div class="pub-venue">International Conference on Numerical Combustion &nbsp;·&nbsp; 2025</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">Modeling Enthalpy Variations with Mixture Fraction in High-Speed Turbulent Combustion</div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, M.E. Mueller</div>
+      <div class="pub-venue">United States National Combustion Meeting &nbsp;·&nbsp; 2025</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">Inherently High-speed Manifold-based Modeling of Supersonic Turbulent Combustion</div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, M.E. Mueller</div>
+      <div class="pub-venue">APS Division of Fluid Dynamics &nbsp;·&nbsp; 2024</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">Manifold-based Modeling of Supersonic Turbulent Combustion: Direct Inclusion of Compressibility Effects</div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, H. Sitaraman, M.E. Mueller</div>
+      <div class="pub-venue">International Conference on Numerical Combustion &amp; Eastern States Section of the Combustion Institute &nbsp;·&nbsp; 2024</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">Role of Compressibility Effects in Manifold Models for Supersonic Turbulent Combustion</div>
+      <div class="pub-authors"><strong>J.B. Boerchers</strong>, M.E. Mueller</div>
+      <div class="pub-venue">APS Division of Fluid Dynamics &nbsp;·&nbsp; 2023</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Conference</div>
+      <div class="pub-title">Modeling and Topology Optimization of Flow Problems in Porous Media Using Neural Networks</div>
+      <div class="pub-authors">M. Schmidt, <strong>J.B. Boerchers</strong>, B. Lazarov</div>
+      <div class="pub-venue">ASME IMECE &nbsp;·&nbsp; 2022</div>
+    </div>
+
+    <div class="pub-entry fade-in">
+      <div class="pub-type">Journal</div>
+      <div class="pub-title">Effect of Piezoelectricity on the Reactivity of Nanoaluminum P(VDF-TrFE) Energetic Composites</div>
+      <div class="pub-authors">D.L. Drewniak, E. Li, Y. Zhou, <strong>J.B. Boerchers</strong>, J.E. Boyer, Q. Wang, R.A. Yetter</div>
+      <div class="pub-venue">International Journal of Energetic Materials and Chemical Propulsion &nbsp;·&nbsp; 2022</div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>John B. Boerchers &nbsp;·&nbsp; Princeton University &nbsp;·&nbsp; jb5027@princeton.edu</p>
+  <p>Built from scratch · 2026</p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

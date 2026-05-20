@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Boerchers</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── Hero ── */
+  .hero {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  .hero-inner { max-width: 680px; }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--accent);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  h1 .accent { color: var(--accent); }
+
+  .hero-title-sub {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    margin-bottom: 32px;
+    margin-top: 12px;
+  }
+
+  .hero-bio {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 580px;
+    margin-bottom: 40px;
+  }
+
+  .hero-bio strong { color: var(--text); font-weight: 500; }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  /* ── Stat strip ── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 540px;
+  }
+
+  .stat {
+    background: var(--bg2);
+    padding: 20px 24px;
+  }
+
+  .stat-num {
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-num span { color: var(--accent); }
+
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* ── About strip ── */
+  .about-strip {
+    border-top: 1px solid var(--border);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .about-block h3 {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .about-block p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    border: 1px solid var(--border-bright);
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 700px) {
+    .hero { padding: 60px 24px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">jb<span>@princeton</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-eyebrow fade-in">PhD Candidate · Princeton University</div>
+
+      <h1 class="fade-in">John<br><span class="accent">Boerchers</span><span class="cursor"></span></h1>
+
+      <div class="hero-title-sub fade-in">
+        Computational Engineering &nbsp;/&nbsp; Multiphysics Simulation &nbsp;/&nbsp; Scientific Computing
+      </div>
+
+      <p class="hero-bio fade-in">
+        I develop <strong>computational methods for high-speed reacting flows</strong> — building
+        high-fidelity numerical solvers, reduced-order modeling frameworks, and physics-constrained
+        machine learning systems for complex coupled physical processes. My work lives at the
+        boundary of rigorous mathematical modeling and practical scientific software engineering.
+      </p>
+
+      <div class="hero-actions fade-in">
+        <a href="research.html" class="btn">View Research</a>
+        <a href="cv.html" class="btn btn-ghost">Download CV</a>
+      </div>
+
+      <div class="stats fade-in">
+        <div class="stat">
+          <div class="stat-num">7<span>+</span></div>
+          <div class="stat-label">Conference Presentations</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4<span>+</span></div>
+          <div class="stat-label">Years at Princeton</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2<span>×</span></div>
+          <div class="stat-label">Teaching Awards</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="about-strip">
+    <div class="section">
+      <div class="label">About</div>
+      <div class="about-grid">
+
+        <div class="about-block">
+          <h3>Research Focus</h3>
+          <p>
+            My doctoral work at Princeton centers on developing manifold-based turbulence-chemistry
+            interaction models for supersonic and hypersonic combustion. I work within the
+            Computational Turbulent Reacting Flow Laboratory under Prof. Michael E. Mueller,
+            targeting propulsion applications including rotating detonation engines and scramjets.
+          </p>
+        </div>
+
+        <div class="about-block">
+          <h3>Technical Background</h3>
+          <p>
+            I build and deploy large-scale scientific software in C++, Fortran, and Python on
+            HPC clusters. I have hands-on experience with GPU acceleration (OpenACC), parallel
+            computing (MPI/OpenMP), and physics-constrained machine learning (PyTorch) from
+            my internship at Lawrence Livermore National Laboratory.
+          </p>
+          <div class="tag-list">
+            <span class="tag">C++</span>
+            <span class="tag">Fortran</span>
+            <span class="tag">Python</span>
+            <span class="tag">MPI</span>
+            <span class="tag">OpenACC</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">PeleC</span>
+            <span class="tag">HPC</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>John B. Boerchers &nbsp;·&nbsp; Princeton University &nbsp;·&nbsp; jb5027@princeton.edu</p>
+  <p>Built from scratch · 2026</p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — John Boerchers</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .contact-wrap {
+    min-height: calc(100vh - 64px - 80px);
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .contact-left h2 {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-top: 12px;
+    margin-bottom: 20px;
+    line-height: 1.05;
+  }
+
+  .contact-left p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .contact-item:hover {
+    border-color: var(--border-bright);
+    box-shadow: var(--glow);
+  }
+
+  .contact-icon {
+    font-family: var(--mono);
+    font-size: 18px;
+    color: var(--accent);
+    width: 32px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .contact-item-text {}
+
+  .contact-item-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .contact-item-value {
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  /* ── Right: currently block ── */
+  .currently-block {
+    padding: 32px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .currently-block h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .currently-item {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .currently-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .currently-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .currently-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  .currently-text strong { color: var(--text); font-weight: 500; }
+
+  @media (max-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">jb<span>@princeton</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="contact-wrap">
+    <div class="section" style="width:100%;">
+      <div class="contact-grid">
+
+        <div class="contact-left fade-in">
+          <div class="label">Get in touch</div>
+          <h2>Let's talk.</h2>
+          <p>
+            I'm always happy to discuss research, potential collaborations,
+            or opportunities. Feel free to reach out by email — it's the
+            best way to get in touch.
+          </p>
+
+          <div class="contact-items">
+            <a class="contact-item" href="mailto:jb5027@princeton.edu">
+              <div class="contact-icon">@</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">jb5027@princeton.edu</div>
+              </div>
+            </a>
+            <a class="contact-item" href="https://linkedin.com/in/john-boerchers" target="_blank" rel="noopener">
+              <div class="contact-icon">in</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">LinkedIn</div>
+                <div class="contact-item-value">linkedin.com/in/john-boerchers</div>
+              </div>
+            </a>
+            <a class="contact-item" href="tel:9734790494">
+              <div class="contact-icon">#</div>
+              <div class="contact-item-text">
+                <div class="contact-item-label">Phone</div>
+                <div class="contact-item-value">973-479-0494</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="fade-in">
+          <div class="currently-block">
+            <h3>Currently</h3>
+
+            <div class="currently-item">
+              <div class="currently-dot"></div>
+              <div class="currently-text">
+                <strong>PhD candidate</strong> at Princeton University, expected graduation May 2027.
+                Actively exploring industry opportunities for summer/fall 2027.
+              </div>
+            </div>
+
+            <div class="currently-item">
+              <div class="currently-dot"></div>
+              <div class="currently-text">
+                Completing a journal paper on <strong>thermodynamically consistent manifold models</strong>
+                for premixed deflagrations and detonations.
+              </div>
+            </div>
+
+            <div class="currently-item">
+              <div class="currently-dot"></div>
+              <div class="currently-text">
+                Teaching <strong>MAE 426: Rocket &amp; Air-Breathing Propulsion Technology</strong>
+                as a TA at Princeton, Spring 2026.
+              </div>
+            </div>
+
+            <div class="currently-item">
+              <div class="currently-dot"></div>
+              <div class="currently-text">
+                Interested in roles at the intersection of <strong>multiphysics simulation,
+                scientific computing, and data-driven methods</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>John B. Boerchers &nbsp;·&nbsp; Princeton University &nbsp;·&nbsp; jb5027@princeton.edu</p>
+  <p>Built from scratch · 2026</p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

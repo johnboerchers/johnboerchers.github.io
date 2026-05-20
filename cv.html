@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV — John Boerchers</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-header {
+    border-bottom: 1px solid var(--border);
+    padding: 80px 48px 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .page-header h2 {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-top: 12px;
+  }
+
+  /* ── CV sections ── */
+  .cv-block {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cv-block:last-child { border-bottom: none; }
+
+  .cv-block h3 {
+    font-family: var(--display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+
+  .cv-entry {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .cv-entry:last-child { margin-bottom: 0; }
+
+  .cv-date {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    padding-top: 3px;
+    letter-spacing: 0.05em;
+  }
+
+  .cv-entry-title {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .cv-entry-sub {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .cv-entry-detail {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  .cv-entry-detail strong { color: var(--text); font-weight: 500; }
+
+  /* ── Skills inline ── */
+  .skill-line {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .skill-line strong { color: var(--text); font-weight: 500; font-family: var(--mono); font-size: 12px; }
+
+  /* ── Honors ── */
+  .honor-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 16px;
+  }
+
+  .honor-row:last-child { border-bottom: none; }
+
+  .honor-name { font-size: 14px; color: var(--text); }
+  .honor-inst { font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
+  .honor-year { font-family: var(--mono); font-size: 11px; color: var(--text-dim); white-space: nowrap; }
+
+  @media (max-width: 700px) {
+    .page-header { padding: 60px 24px 40px; }
+    .cv-entry { grid-template-columns: 1fr; gap: 4px; }
+    .honor-row { flex-wrap: wrap; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">jb<span>@princeton</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header fade-in">
+    <div>
+      <div class="label">Background</div>
+      <h2>Curriculum Vitae</h2>
+    </div>
+    <a href="john_boerchers_resume.pdf" class="btn" download>
+      ↓ &nbsp;Download PDF
+    </a>
+  </div>
+
+  <div class="section">
+
+    <!-- Education -->
+    <div class="cv-block fade-in">
+      <h3>Education</h3>
+
+      <div class="cv-entry">
+        <div class="cv-date">2022 — 2027</div>
+        <div>
+          <div class="cv-entry-title">Princeton University</div>
+          <div class="cv-entry-sub">Princeton, NJ</div>
+          <div class="cv-entry-detail">
+            Ph.D. Candidate, Mechanical &amp; Aerospace Engineering (exp. May 2027)<br>
+            M.A., Mechanical &amp; Aerospace Engineering (conferred 2024)<br>
+            Graduate Certificate in Computational Science &amp; Engineering<br>
+            Advisor: Prof. Michael E. Mueller &nbsp;·&nbsp; <strong>MAE Department Fellowship (2023)</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">2018 — 2022</div>
+        <div>
+          <div class="cv-entry-title">Pennsylvania State University</div>
+          <div class="cv-entry-sub">State College, PA</div>
+          <div class="cv-entry-detail">
+            B.S., Aerospace Engineering — Schreyer Honors College<br>
+            <em>Summa Cum Laude</em> &nbsp;·&nbsp; GPA 3.99<br>
+            Thesis: <em>A Viscous-Inviscid Channel Flow Approach for Preliminary Wind Tunnel Design</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Research -->
+    <div class="cv-block fade-in">
+      <h3>Research Experience</h3>
+
+      <div class="cv-entry">
+        <div class="cv-date">2022 — Present</div>
+        <div>
+          <div class="cv-entry-title">Computational Turbulent Reacting Flow Lab, Princeton</div>
+          <div class="cv-entry-sub">Graduate Research Assistant</div>
+          <div class="cv-entry-detail">
+            Developing manifold-based LES models for high-speed turbulent combustion with propulsion applications (RDE, scramjet).
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">Summer 2022</div>
+        <div>
+          <div class="cv-entry-title">Lawrence Livermore National Laboratory</div>
+          <div class="cv-entry-sub">Research Intern</div>
+          <div class="cv-entry-detail">
+            Physics-constrained neural networks (PyTorch) for surrogate modeling and topology optimization of flow problems.
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">2021 — 2022</div>
+        <div>
+          <div class="cv-entry-title">Aircraft Propulsion Research Group, Penn State</div>
+          <div class="cv-entry-sub">Undergraduate Researcher · Advisor: Prof. David K. Hall</div>
+          <div class="cv-entry-detail">
+            Developed viscous-inviscid coupled numerical tool for wind tunnel aerodynamic design.
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">2019 — 2021</div>
+        <div>
+          <div class="cv-entry-title">High Pressure Combustion Laboratory, Penn State</div>
+          <div class="cv-entry-sub">Undergraduate Researcher · Advisor: Prof. Richard Yetter</div>
+          <div class="cv-entry-detail">
+            Laser ignition experiments for energetic solid propellants; contributed to journal publication.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teaching -->
+    <div class="cv-block fade-in">
+      <h3>Teaching &amp; Mentorship</h3>
+
+      <div class="cv-entry">
+        <div class="cv-date">Spring 2026</div>
+        <div>
+          <div class="cv-entry-title">MAE 426: Rocket &amp; Air-Breathing Propulsion Technology</div>
+          <div class="cv-entry-sub">Teaching Assistant · Princeton University</div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">Spring 2025</div>
+        <div>
+          <div class="cv-entry-title">MAE 427: Energy Conversion &amp; the Environment</div>
+          <div class="cv-entry-sub">Teaching Assistant · Princeton University</div>
+          <div class="cv-entry-detail"><strong>E-Council Teaching Award 2026</strong></div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">Fall 2024</div>
+        <div>
+          <div class="cv-entry-title">MAE 335: Compressible Flows</div>
+          <div class="cv-entry-sub">Teaching Assistant · Princeton University</div>
+          <div class="cv-entry-detail"><strong>Crocco Teaching Award 2025</strong></div>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-date">2024 — 2025</div>
+        <div>
+          <div class="cv-entry-title">Undergraduate Thesis Mentor</div>
+          <div class="cv-entry-sub">Princeton University</div>
+          <div class="cv-entry-detail">
+            Mentored Laura T. Thompson on RDE numerical modeling. Thesis received <strong>MAE Best Undergraduate Thesis Award</strong> and <strong>SEAS Thesis Award</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="cv-block fade-in">
+      <h3>Technical Skills</h3>
+      <div class="skill-line"><strong>Languages</strong> &nbsp; Python (proficient) · Fortran (intermediate) · C++ (intermediate)</div>
+      <div class="skill-line"><strong>HPC &amp; Parallel</strong> &nbsp; MPI / mpi4py · OpenMP · OpenACC (GPU)</div>
+      <div class="skill-line"><strong>Scientific Tools</strong> &nbsp; NumPy · SciPy · MATLAB · Git · Bash/Linux · LaTeX · PeleC</div>
+      <div class="skill-line"><strong>Machine Learning</strong> &nbsp; PyTorch · physics-constrained networks · surrogate modeling</div>
+      <div class="skill-line"><strong>Math</strong> &nbsp; PDEs/ODEs · linear algebra · numerical methods · optimization</div>
+    </div>
+
+    <!-- Honors -->
+    <div class="cv-block fade-in">
+      <h3>Honors &amp; Awards</h3>
+      <div class="honor-row">
+        <div><div class="honor-name">E-Council Teaching Award</div><div class="honor-inst">Princeton University</div></div>
+        <div class="honor-year">2026</div>
+      </div>
+      <div class="honor-row">
+        <div><div class="honor-name">Crocco Teaching Award</div><div class="honor-inst">Princeton University</div></div>
+        <div class="honor-year">2025</div>
+      </div>
+      <div class="honor-row">
+        <div><div class="honor-name">MAE Department Fellowship</div><div class="honor-inst">Princeton University</div></div>
+        <div class="honor-year">2023</div>
+      </div>
+      <div class="honor-row">
+        <div><div class="honor-name">Richard W. Leonhard Scholarship</div><div class="honor-inst">Pennsylvania State University</div></div>
+        <div class="honor-year">2021</div>
+      </div>
+      <div class="honor-row">
+        <div><div class="honor-name">Evan Pugh Scholar Award</div><div class="honor-inst">Pennsylvania State University</div></div>
+        <div class="honor-year">2021</div>
+      </div>
+      <div class="honor-row">
+        <div><div class="honor-name">The President Sparks Award</div><div class="honor-inst">Pennsylvania State University</div></div>
+        <div class="honor-year">2020</div>
+      </div>
+      <div class="honor-row">
+        <div><div class="honor-name">The President's Freshman Award</div><div class="honor-inst">Pennsylvania State University</div></div>
+        <div class="honor-year">2019</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>John B. Boerchers &nbsp;·&nbsp; Princeton University &nbsp;·&nbsp; jb5027@princeton.edu</p>
+  <p>Built from scratch · 2026</p>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
