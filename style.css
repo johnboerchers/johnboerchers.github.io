@@ -230,3 +230,37 @@ footer p {
   .section { padding: 60px 24px; }
   footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* ── Publication link ── */
+.pub-link {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  border: 1px solid var(--border-bright);
+  border-radius: 2px;
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.pub-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(232,98,42,0.06);
+}
+
+.currently-text a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.currently-text a:hover {
+  color: var(--accent);
+  border-color: var(--accent2);
+}
